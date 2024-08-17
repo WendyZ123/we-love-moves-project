@@ -11,6 +11,9 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Welcome!");
+});
 app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/theaters", theatersRouter);
